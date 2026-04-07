@@ -90,5 +90,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Folder Selected!", Toast.LENGTH_SHORT).show();
             }
         }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_MEDIA_IMAGES},
+                    101);
+        }
     }
 }

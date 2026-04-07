@@ -3,36 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="24dp"
     android:gravity="center"
-    android:background="#F5F5F5">
+    android:background="#121212">  <!-- Dark background -->
 
+    <!-- Title -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Photo Manager"
         android:textSize="26sp"
         android:textStyle="bold"
-        android:layout_marginBottom="40dp"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="40dp"/>
 
+    <!-- Capture -->
     <Button
         android:id="@+id/btnCapture"
-        android:text="Capture Photo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"/>
+        android:layout_height="55dp"
+        android:text="Capture Photo"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#5C6BC0"
+        android:textColor="#FFFFFF"/>
 
+    <!-- Select Folder -->
     <Button
         android:id="@+id/btnSelectFolder"
-        android:text="Select Folder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"/>
+        android:layout_height="55dp"
+        android:text="Select Folder"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FB8C00"
+        android:textColor="#FFFFFF"/>
 
+    <!-- View Gallery -->
     <Button
         android:id="@+id/btnViewGallery"
-        android:text="View Gallery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="55dp"
+        android:text="View Gallery"
+        android:textSize="16sp"
+        android:backgroundTint="#43A047"
+        android:textColor="#FFFFFF"/>
 
 </LinearLayout>
