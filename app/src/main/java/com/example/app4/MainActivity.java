@@ -33,29 +33,29 @@ public class MainActivity extends AppCompatActivity {
         btnSelectFolder = findViewById(R.id.btnSelectFolder);
         btnViewGallery = findViewById(R.id.btnViewGallery);
 
-        // 🔐 Runtime Permission
+        // Runtime Permission
         checkPermissions();
 
-        // 📸 Capture Photo
+        // Capture Photo
         btnCapture.setOnClickListener(v -> {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent, CAMERA_REQUEST);
         });
 
-        // 📁 Select Folder
+        // Select Folder
         btnSelectFolder.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
             startActivityForResult(intent, 2);
         });
 
-        // 🖼️ Open Gallery
+        //  Open Gallery
         btnViewGallery.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
             startActivity(intent);
         });
     }
 
-    // 🔐 Permission Function
+    //  Permission Function
     private void checkPermissions() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -69,14 +69,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // 📥 Result handle (Camera + Folder)
+    //  Result handle (Camera + Folder)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK) {
 
-            // 📸 Camera result
+            // Camera result
             if (requestCode == CAMERA_REQUEST) {
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Photo Captured!", Toast.LENGTH_SHORT).show();
             }
 
-            // 📁 Folder selected
+            //  Folder selected
             if (requestCode == 2) {
                 folderUri = data.getData();
                 Toast.makeText(this, "Folder Selected!", Toast.LENGTH_SHORT).show();

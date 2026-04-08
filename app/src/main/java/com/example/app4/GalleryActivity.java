@@ -35,7 +35,7 @@ public class GalleryActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    // 📸 Load images from device
+    //  Load images from device
     private void loadImages() {
 
         String[] projection = { MediaStore.Images.Media._ID };
