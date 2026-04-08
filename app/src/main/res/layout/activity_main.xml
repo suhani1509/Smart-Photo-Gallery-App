@@ -1,52 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
     android:background="#121212">
 
-    <!-- Title -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Photo Manager"
-        android:textSize="26sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage your gallery professionally"
+        android:textColor="#888888"
+        android:textSize="14sp"
         android:layout_marginBottom="40dp"/>
 
-    <!-- Capture -->
-    <Button
-        android:id="@+id/btnCapture"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="Capture Photo"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#5C6BC0"
-        android:textColor="#FFFFFF"/>
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardElevation="4dp">
 
-    <!-- Select Folder -->
-    <Button
-        android:id="@+id/btnSelectFolder"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="Select Folder"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#FB8C00"
-        android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="📸  Capture Photo"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#5C6BC0" />
+    </androidx.cardview.widget.CardView>
 
-    <!-- View Gallery -->
-    <Button
-        android:id="@+id/btnViewGallery"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="View Gallery"
-        android:textSize="16sp"
-        android:backgroundTint="#43A047"
-        android:textColor="#FFFFFF"/>
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardElevation="4dp">
+
+        <Button
+            android:id="@+id/btnSelectFolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="📁  Select Folder"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#FB8C00" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardElevation="4dp">
+
+        <Button
+            android:id="@+id/btnViewGallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="🖼️  View Gallery"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#43A047" />
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
